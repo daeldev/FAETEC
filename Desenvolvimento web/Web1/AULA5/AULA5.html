@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "css/area.css" type="text/css" media="screen">
+    <title>Aula3</title>
+    <script type="text/javascript">
+        var filtroTeclas =function(event){
+/* 46 é o insert */
+
+            return ((event.charCode >= 48 && event.charCode <= 57))||((event.keyCode == 45 || event.charCode == 46))
+
+        }
+
+        function formatDecimal(campo , teclapres){
+            var tecla = teclapres.keyCode;
+            var vr = new String(campo.value);
+            vr = vr.replace(".","");
+            vr = vr.replace(".","");
+            tam = vr.length;
+            mil = tam - 2;
+            if(tecla != 8 && tecla != 8){
+                if(tam > 0 && tam <= 2)
+                    campo.value = vr.substr(0,2);
+            if(tam > 2)
+                campo.value = vr.substr(0,mil)+ "." + vr.substr(-2);
+            }
+        }
+      function area(){
+        var reais = document.getElementById("reais").value
+             var area = reais * 5.02;
+        document.getElementById("area").value = area;
+      }
+      function limpar(){
+        document.getElementById("reais").value="";
+        document.getElementById("area").value="";
+      }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <h1>Calcule do Frete</h1>
+        <label>Origem</label>
+        <select name="origem" required>
+          <option disabled selected>Selecione a Origem</option>
+          <option>Rio De Janeiro</option>
+          <option>São Paulo</option>
+        </select>
+        <br></br>
+        <label>Destino</label>
+        <select name="Destino" required class="">
+          <option disabled selected>Selecione o Destino</option>
+          <option>Rio De Janeiro</option>
+          <option>São Paulo</option>
+        </select>
+        <label>Valor Do Frete:</label>
+
+        <input type="text" id="reais" size="5" onkeypress="return filtroTeclas(event)" onkeyup= "formatDecima(this,event)" required>
+        <br><br>
+        <label>Dollar:</label>
+        <input type="text" name="area" id="area" size="5" readonly="true">
+        <br></br>
+        <button onclick="area ()" class="botao" >calcular</button>
+        <br></br>
+        <button onclick="limpar ()" class="botao" >Limpar</button>
+     </fieldset>
+    
+</body>
+</html>

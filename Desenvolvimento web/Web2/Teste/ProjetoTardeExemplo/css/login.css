@@ -1,0 +1,41 @@
+.tela-login{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin: auto;
+    margin-top: 60px;
+    height: 450px;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.24),
+                0px 10px 12px 0px rgba(133, 220, 255, 0.452);
+}
+
+.inputIcon{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.inputIcon input{
+    border: none;
+    outline: none;
+}
+
+input[type=submit]{
+    width: 270px;
+    border-radius: 20px;
+    padding: 12px;
+    margin-top: 30px;
+    background-color: rgb(133, 220, 255);
+    border: none;
+    color: aliceblue;
+}
+
+input :hover{
+     
+}

@@ -1,0 +1,40 @@
+.paragrafo{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(37, 37, 37);
+
+.div-principal{
+    padding-top: 60px;
+    width: 94.5%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 2%;
+    text-align: center;
+    color: beige;
+    align-items: center;
+}
+.div-col30{
+    width: 30%;
+    display: inline-block;
+    background-color: rgb(138, 138, 138);
+    text-align: center;
+    color: beige;
+    margin-left: 2%;
+}
+   @media screen and (max-width: 700px){
+    .div-col30{
+        width: 90%;
+    }   
+}
+}
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+

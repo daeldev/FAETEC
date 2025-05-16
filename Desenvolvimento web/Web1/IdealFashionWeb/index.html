@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ideal Fashion</title>
+</head>
+<body>
+    <!--Inicio banner-->
+    <div class="banner">
+
+        <!--Inicio container-->
+        <div class="container">
+            
+            <!--Inicio navegação topo-->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="img/Ideal Fashion.png" alt="Ideal Fashion" width="125px">
+                </div>
+
+                <!--Inicio menu navegação topo-->
+                <nav>
+                    <ul id="MenuItens">
+                        <li><a href="" title="">Sobre nós</a></li>
+                        <li><a href="#produtos" title="">Produtos</a></li>              
+                        <li><a href="#Minha conta" title="">Minha conta</a></li>
+                    </ul>
+                </nav>
+                <!--Fim menu navegação topo-->
+
+                <img src="img/carrinho.png" alt="" width="30px" height="30px">
+            </div>
+            <!--Fim navegação topo--> 
+
+            <!--Inicio texto do banner-->          
+            <div class="linha">
+                <div class="col-2">
+                    <h1>Escolha um novo <br>estilo de vida</h1>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <br><a href="" class="btn">Mais informações</a>
+                </div>
+                <div class="col-2">
+                    <img src="img/banner-1.png" alt="">
+                </div>
+            </div>
+            <!--Fim texto do banner-->           
+        </div>
+        <!--Fim container-->
+    </div>
+    <!--Fim banner-->
+    
+    <!--Inicio produtos-->
+        <div class="produtos" id="produtos">
+            <!--Inicio corpo produtos-->
+            <div class="corpo-produtos">
+                <!--Inicio linha corpo produtos-->
+                <div class="linha">
+                    <div class="col-3">
+                        <img src="img/categoria-1.jpg" alt="">
+                        </div>
+                        <div class="linha">
+                            <img src="img/categoria-2.jpg" alt="">
+                        </div>
+                        <div class="linha">
+                            <img src="img/categoria-3.jpg" alt="">
+                        </div>
+                    </div>
+                <!--Fim linha corpo produtos-->
+            </div>
+            <!--Fim corpo produtos-->
+        </div>
+    <!--Fim produtos-->    
+    
+    <div id="Minha conta" class="minha-conta">
+        <div class="container">
+            <div class="linha">
+                <div class="col-2">
+                    <img src="img/banner-1.png" alt="" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="formulario">
+                        <div class="btn-form">
+                            <span onclick="Entrar()">Entrar</span>
+                            <hr id="Indicador">
+                        </div>
+                        <form action="php/formulario.php" method="POST">
+                            <input type="text" name="nome" id="nome" placeholder="E-mail de acesso" required>
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                            <button type="submit" name="senEntrar" class="btn">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

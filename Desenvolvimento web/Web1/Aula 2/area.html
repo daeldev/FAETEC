@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/area.css" type="text/css" media="screen">
+    <title>Calcule a Área</title>
+    <script> type="text/javascrpit">
+        var filtroTeclas =function(event){
+            return ((event.charCode >= 48 && event.charCode <= 57))||((event.keycode == 45 || event.charcode == 46))
+        }
+        function formaDecimal (campo, teclapres){
+            var tecla = teclapres.keyCode;
+            var vr = new String(campo.value);
+            vr = vr.replace(".","");
+            vr = vr.replace(".","");
+            tam = vr.length;
+            mil = tam - 2;
+            if(tecla != 8 && tecla != 8){
+                if(tam > 0 && tam <= 2)
+                    campo.value = vr.substr(0,2);
+            if (tam > 2)
+                campo.value = vr.substr(0,mil)+ "." + vr.substr(-2);
+                }
+            }
+            function area(){
+                var reais = document.getElementById("reais").value
+                var area = reais * 5.02;
+                document.getElementById("area").value = area;
+            }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <h1>
+            Calcule a Área
+        </h1>
+        <label>
+            Reais
+        </label>
+        <input type="text" id="reais" size= "5" onkeypress = "return filtroTeclas(event)" onkeyup= "formaDecimal(this.event)" required>
+        <br><br>
+        <label>
+            Dollar:
+        </label>
+        <input type="text" id="area" size= "5" onkeypress="return filtroTeclas(event)"required>
+        <br><br>
+        <label  
+            for="Area Calculada">
+    </label>
+    <input type="text" name="area" id="area" size="5" readonly="true">
+    <br></br>
+    <button onclick="area ()" class="botao" >calcular</button>
+    </fieldset>
+</body>
+</html>

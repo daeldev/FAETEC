@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Projeto01</string>
+    <string name="str_login">Login</string>
+    <string name="str_hint_login">Login</string>
+    <string name="str_hint_senha">Senha</string>
+    <string name="str_entrar">Entrar</string>
+    <string name="str_nao_tenho_cadastro">Não sou cadastrado</string>
+    <string name="msg_campo_obrigatorio">Preencha o campo</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_dt_nasc">Data nascimento</string>
+    <string name="str_cpf">Cpf*</string>
+    <string name="str_genero">Gênero*</string>
+    <string name="str_feminino">Feminino</string>
+    <string name="str_masculino">Masculino</string>
+    <string name="str_outros">Outros</string>
+    <string name="str_termos">Concordo com os termos de uso do aplicativo.</string>
+    <string name="str_salvar">Salvar</string>
+    <string name="str_bem_vindo">"Bem vindo"</string>
+</resources>

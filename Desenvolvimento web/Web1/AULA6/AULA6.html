@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "css/AULA6.css" type="text/css" media="screen">
+    <title>aula6</title>
+</head>
+<body>
+    <script>
+
+      function calculo(){
+        var reais = document.getElementById("reais").value
+             var area = reais * 5.02;
+        document.getElementById("area").value = area;
+}
+      function limpar(){
+        document.getElementById("origem").value="";
+        document.getElementById("Destino").value="";
+      }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <h1>Calcule do Frete</h1>
+        <label>Origem</label>
+        <select name="origem" required>
+          <option disabled selected>Selecione a Origem</option>
+          <option>Rio De Janeiro</option>
+          <option>São Paulo</option>
+        </select>
+        <br></br>
+        <label>Destino</label>
+        <select name="Destino" required class="">
+          <option disabled selected>Selecione o Destino</option>
+          <option>Rio De Janeiro</option>
+          <option>São Paulo</option>
+        </select>
+        <br></br>
+        <label><input type="checkbox" checked="checked">Entrega Rápida</label>
+        </label>
+        <br><br>
+        <label>Valor de Frete</label>
+        <input type="text" name="valor" id="valor" size="5" readonly="type">
+        <br><br>
+
+        <button onclick="area ()" class="botao" >calcular</button>
+        <button onclick="limpar ()" class="botao" >Limpar</button>
+        </fieldset>
+
+</body>
+</html>

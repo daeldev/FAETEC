@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(229, 255, 0);}
+h1{
+    text-align: left;
+    text-decoration: underline;
+    margin-right: 2%;
+    padding-top: 60px;
+    font-size: 20px;
+    background-color: aqua;
+}
+h2{
+    text-align: left;
+    text-decoration: underline;
+    margin-right: 2%;
+    padding-top: 60px;
+    font-size: 20px;
+    background-color: aqua;
+    display: grid;
+    gap: 8px;
+}
+.article{ grid-area: article; }

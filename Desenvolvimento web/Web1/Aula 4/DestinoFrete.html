@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "css/estilo.css" type="text/css" media="screen">
+    <title>Aula3</title>
+    <script type="text/javascript">
+        var filtroTeclas =function(event){
+
+
+            return ((event.charCode >= 48 && event.charCode <= 57))||((event.keyCode == 45 || event.charCode == 46))
+
+        }
+
+        function formatDecimal(campo , teclapres){
+            var tecla = teclapres.keyCode;
+            var vr = new String(campo.value);
+            vr = vr.replace(".","");
+            vr = vr.replace(".","");
+            tam = vr.length;
+            mil = tam - 2;
+            if(tecla != 8 && tecla != 8){
+                if(tam > 0 && tam <= 2)
+                    campo.value = vr.substr(0,2);
+            if(tam > 2)
+                campo.value = vr.substr(0,mil)+ "." + vr.substr(-2);
+            }
+        }
+      function area(){
+        var reais = document.getElementById("reais").value
+             var area = reais * 5.02;
+        document.getElementById("area").value = area;
+      }
+        function limpar(){
+            document.getElementById("reais").value="";
+            document.getElementById("area").value="";
+        }
+
+    </script>
+</head>
+<body>
+  
+    <fieldset>
+        
+        <h1>Origem</h1>
+        <select name="Origem" required>
+        <option disable selected>Selecione a Origem</option>
+        <option>Rio de Janeiro</option>    
+        <option>São Paulo</option>    
+        <select>
+        <br><br>
+
+        <h1>Destino</h1>
+        <select name="destino" required class="">
+        <option disable selected>Selecione o Destino</option>
+        <option>Rio de Janeiro</option>    
+        <option>São Paulo</option>    
+        <select>
+        <label>Valor do Frete:</label>
+        <input type="text" id="valor" size="5" onkeypress="return filtroTeclas(event)" onkeyup= "formatDecima(this,event)" required>
+        <br><br>
+       
+        <label><input type="checkbox" checked="checked">Entrega Rápida<label>
+        <br><br>
+        <label>Valor do Frete:</label>
+        <br>
+        <label>"Rio de Janeiro / São Paulo: R$ 38,00 por KM rodado"</label>
+        <br>
+        <label>"São Paulo / Rio de Janeiro: R$ 42,80 por KM rodado"</label>
+        <br>
+        <label>"Rio de Janeiro / São Paulo: R$ 38,00 por KM rodado"</label>
+        <br>
+        <input type= "text" name="valor" id="valor" size="5">
+        <br><br>
+        <button onclick="area()" class="botao">Calcular</button>
+        <button onclick="limpar()" class="botao">Limpar</button>
+        
+
+    </fieldset>
+    
+</body>
+</html>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidAula</string>
+    <string name="usuario">Usuário:</string>
+    <string name="senha">Senha:</string>
+    <string name="Confirmar">Confirmar</string>
+    <string name="Voltar">Voltar</string>
+</resources>

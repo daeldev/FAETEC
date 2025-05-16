@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ProvaAndroid</string>
+    <string name="Entrar">Entrar</string>
+    <string name="senha">Senha:</string>
+    <string name="tilLogin">Login:</string>
+    <string name="confirmarSenha">Confirmar senha:</string>
+    <string name="Voltar">Voltar</string>
+</resources>

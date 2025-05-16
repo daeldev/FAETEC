@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "css/estilo.css" type="text/css" media="screen">
+    <title>Aula3</title>
+    <script type="text/javascript">
+        var filtroTeclas =function(event){
+
+
+            return ((event.charCode >= 48 && event.charCode <= 57))||((event.keyCode == 45 || event.charCode == 46))
+
+        }
+
+        function formatDecimal(campo , teclapres){
+            var tecla = teclapres.keyCode;
+            var vr = new String(campo.value);
+            vr = vr.replace(".","");
+            vr = vr.replace(".","");
+            tam = vr.length;
+            mil = tam - 2;
+            if(tecla != 8 && tecla != 8){
+                if(tam > 0 && tam <= 2)
+                    campo.value = vr.substr(0,2);
+            if(tam > 2)
+                campo.value = vr.substr(0,mil)+ "." + vr.substr(-2);
+            }
+        }
+      function area(){
+        var reais = document.getElementById("reais").value
+             var area = reais * 5.02;
+        document.getElementById("area").value = area;
+      }
+        function limpar(){
+            document.getElementById("reais").value="";
+            document.getElementById("area").value="";
+        }
+
+    </script>
+</head>
+<body>
+  
+    <fieldset>
+        
+        <h1>Conversão de Moeda</h1>
+        <label>Informe o valor em BRL:</label>
+        <input type="text" id="reais" size="5" onkeypress="return filtroTeclas(event)" onkeyup= "formatDecima(this,event)" required>
+        <br><br>
+        <label>Conversão em Dólar:</label>
+        <input type="text" name="area" id="area" size="5" readonly="true">
+        <br></br>
+        <button onclick="area ()" class="botao" >CALCULAR</button>
+        <button onclick="limpar ()" class="botao" >LIMPAR</button>
+    </fieldset>
+    
+</body>
+</html>

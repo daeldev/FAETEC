@@ -1,0 +1,24 @@
+body {
+    background-color: dimgrey;
+}
+label{
+    color: white;
+}
+h1{
+    color: white;
+}
+input [type=text]{
+    font-size: 20px;
+    background-color: bisque;
+}
+.botao{
+    background-color: aquamarine;
+    border: 2px;
+    color: white;
+    padding: 14px 28px;
+    margin: 2px 2px;
+}
+.botao:houver{
+    background-color: brown;
+    transform: scale(1,3);
+}
